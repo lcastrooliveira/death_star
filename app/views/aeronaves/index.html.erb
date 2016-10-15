@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Aeronaves</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Modelo</th>
+      <th>Uuid</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @aeronaves.each do |aeronave| %>
+      <tr>
+        <td><%= aeronave.modelo %></td>
+        <td><%= aeronave.uuid %></td>
+        <td><%= link_to 'Show', aeronave %></td>
+        <td><%= link_to 'Edit', edit_aeronave_path(aeronave) %></td>
+        <td><%= link_to 'Destroy', aeronave, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Aeronave', new_aeronave_path %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Modelo:</strong>
+  <%= @aeronave.modelo %>
+</p>
+
+<p>
+  <strong>Uuid:</strong>
+  <%= @aeronave.uuid %>
+</p>
+
+<%= link_to 'Edit', edit_aeronave_path(@aeronave) %> |
+<%= link_to 'Back', aeronaves_path %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  modelo: Caca Imperial I
+  uuid: 1
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+
+two:
+  modelo: Caca Imperial II
+  uuid: 2
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>

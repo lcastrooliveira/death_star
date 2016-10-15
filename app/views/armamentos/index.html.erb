@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Armamentos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Descricao</th>
+      <th>Poder destruicao</th>
+      <th>Quantidade</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @armamentos.each do |armamento| %>
+      <tr>
+        <td><%= armamento.nome %></td>
+        <td><%= armamento.descricao %></td>
+        <td><%= armamento.poder_destruicao %></td>
+        <td><%= armamento.quantidade %></td>
+        <td><%= link_to 'Show', armamento %></td>
+        <td><%= link_to 'Edit', edit_armamento_path(armamento) %></td>
+        <td><%= link_to 'Destroy', armamento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Armamento', new_armamento_path %>

@@ -1,0 +1,1 @@
+json.array! @soldados, partial: 'soldados/soldado', as: :soldado

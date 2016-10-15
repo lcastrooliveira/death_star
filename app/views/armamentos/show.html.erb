@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @armamento.nome %>
+</p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @armamento.descricao %>
+</p>
+
+<p>
+  <strong>Poder destruicao:</strong>
+  <%= @armamento.poder_destruicao %>
+</p>
+
+<p>
+  <strong>Quantidade:</strong>
+  <%= @armamento.quantidade %>
+</p>
+
+<%= link_to 'Edit', edit_armamento_path(@armamento) %> |
+<%= link_to 'Back', armamentos_path %>

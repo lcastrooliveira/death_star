@@ -1,0 +1,25 @@
+<%= form_for(@aeronave) do |f| %>
+  <% if @aeronave.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@aeronave.errors.count, "error") %> prohibited this aeronave from being saved:</h2>
+
+      <ul>
+      <% @aeronave.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :modelo %><br>
+    <%= f.text_field :modelo %>
+  </div>
+  <div class="field">
+    <%= f.label :uuid %><br>
+    <%= f.number_field :uuid %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

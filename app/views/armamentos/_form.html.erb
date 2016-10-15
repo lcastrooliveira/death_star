@@ -1,0 +1,33 @@
+<%= form_for(@armamento) do |f| %>
+  <% if @armamento.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@armamento.errors.count, "error") %> prohibited this armamento from being saved:</h2>
+
+      <ul>
+      <% @armamento.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome %><br>
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :descricao %><br>
+    <%= f.text_field :descricao %>
+  </div>
+  <div class="field">
+    <%= f.label :poder_destruicao %><br>
+    <%= f.number_field :poder_destruicao %>
+  </div>
+  <div class="field">
+    <%= f.label :quantidade %><br>
+    <%= f.number_field :quantidade %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
