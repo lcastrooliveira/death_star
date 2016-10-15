@@ -40,6 +40,10 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem  'minitest-ci'
+  gem 'brakeman'
+  gem 'rubocop', require: false
+  gem 'rubocop-checkstyle_formatter', require: false
+  gem 'rubycritic', :require => false
 end
 
 group :development do
