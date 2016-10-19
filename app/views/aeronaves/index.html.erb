@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Aeronaves</h1>
+<h1>Caças Imperiais Disponíveis</h1>
 
-<table>
+<table class="table table-bordered table-hover">
   <thead>
     <tr>
       <th>Modelo</th>
@@ -16,9 +16,9 @@
       <tr>
         <td><%= aeronave.modelo %></td>
         <td><%= aeronave.uuid %></td>
-        <td><%= link_to 'Show', aeronave %></td>
-        <td><%= link_to 'Edit', edit_aeronave_path(aeronave) %></td>
-        <td><%= link_to 'Destroy', aeronave, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Detalhes', aeronave %></td>
+        <td><%= link_to 'Editar', edit_aeronave_path(aeronave) %></td>
+        <td><%= link_to 'Destroy', aeronave, method: :delete, data: { confirm: 'Tem certeza ?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Aeronave', new_aeronave_path %>
+<%= link_to 'Novo Caça Imperial', new_aeronave_path, :class => "btn btn-primary" %>

@@ -11,23 +11,23 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :nome %><br>
-    <%= f.text_field :nome %>
+    <%= f.text_field :nome, :class => 'form-control' %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :descricao %><br>
-    <%= f.text_field :descricao %>
+    <%= f.text_field :descricao, :class => 'form-control' %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :poder_destruicao %><br>
-    <%= f.number_field :poder_destruicao %>
+    <%= f.number_field :poder_destruicao, :class => 'form-control' %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :quantidade %><br>
-    <%= f.number_field :quantidade %>
+    <%= f.number_field :quantidade, :class => 'form-control' %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :class => "btn btn-success" %>
   </div>
 <% end %>

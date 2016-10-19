@@ -1,6 +1,11 @@
-<h1>Editing aeronave</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @aeronave %> |
-<%= link_to 'Back', aeronaves_path %>
+<div class="container">
+  <h1 class="text-center">Editar Informações do Caça Imperial</h1>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <%= render 'form' %>
+      <hr>
+      <%= link_to 'Detalhes', @aeronave, :class => "btn btn-primary" %>
+      <%= link_to 'Voltar', aeronaves_path, :class => "btn btn-default" %>
+    </div>
+  </div>
+</div>

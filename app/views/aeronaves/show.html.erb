@@ -1,14 +1,22 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Modelo:</strong>
-  <%= @aeronave.modelo %>
-</p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Detalhes do Caça Imperial</h3>
+  </div>
+  <div class="panel-body">
+    <p>
+      <strong>Modelo:</strong>
+      <%= @aeronave.modelo %>
+    </p>
 
-<p>
-  <strong>Uuid:</strong>
-  <%= @aeronave.uuid %>
-</p>
-
-<%= link_to 'Edit', edit_aeronave_path(@aeronave) %> |
-<%= link_to 'Back', aeronaves_path %>
+    <p>
+      <strong>Uuid:</strong>
+      <%= @aeronave.uuid %>
+    </p>
+  </div>
+  <div class="panel-footer">
+    <%= link_to 'Editar', edit_aeronave_path(@aeronave), :class => "btn btn-info" %>
+    <%= link_to 'Voltar', aeronaves_path, :class => "btn btn-default" %>
+  </div>
+</div>

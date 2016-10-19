@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Soldados</h1>
+<h1>Cadastro de Stormtroopers</h1>
 
-<table>
+<table class="table table-bordered table-hover .table-striped">
   <thead>
     <tr>
       <th>Nome</th>
@@ -16,9 +16,9 @@
       <tr>
         <td><%= soldado.nome %></td>
         <td><%= soldado.patente %></td>
-        <td><%= link_to 'Show', soldado %></td>
-        <td><%= link_to 'Edit', edit_soldado_path(soldado) %></td>
-        <td><%= link_to 'Destroy', soldado, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Detalhes', soldado %></td>
+        <td><%= link_to 'Editar', edit_soldado_path(soldado) %></td>
+        <td><%= link_to 'Jogar no Vácuo', soldado, method: :delete, data: { confirm: 'Tem Certeza' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Soldado', new_soldado_path %>
+<%= link_to 'Novo Stormtrooper', new_soldado_path, :class => "btn btn-primary" %>

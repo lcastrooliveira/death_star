@@ -1,24 +1,33 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Nome:</strong>
-  <%= @armamento.nome %>
-</p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Detalhes do Armamento</h3>
+  </div>
+  <div class="panel-body">
 
-<p>
-  <strong>Descricao:</strong>
-  <%= @armamento.descricao %>
-</p>
+    <p>
+      <strong>Nome:</strong>
+      <%= @armamento.nome %>
+    </p>
 
-<p>
-  <strong>Poder destruicao:</strong>
-  <%= @armamento.poder_destruicao %>
-</p>
+    <p>
+      <strong>Descricao:</strong>
+      <%= @armamento.descricao %>
+    </p>
 
-<p>
-  <strong>Quantidade:</strong>
-  <%= @armamento.quantidade %>
-</p>
+    <p>
+      <strong>Poder destruicao:</strong>
+      <%= @armamento.poder_destruicao %>
+    </p>
 
-<%= link_to 'Edit', edit_armamento_path(@armamento) %> |
-<%= link_to 'Back', armamentos_path %>
+    <p>
+      <strong>Quantidade:</strong>
+      <%= @armamento.quantidade %>
+    </p>
+  </div>
+  <div class="panel-footer">
+    <%= link_to 'Editar', edit_armamento_path(@armamento), :class => "btn btn-info" %>
+    <%= link_to 'Voltar', armamentos_path, :class => "btn btn-default" %>
+  </div>
+</div>

@@ -1,14 +1,24 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Nome:</strong>
-  <%= @soldado.nome %>
-</p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Detalhe do Stormtrooper</h3>
+  </div>
+  <div class="panel-body">
 
-<p>
-  <strong>Patente:</strong>
-  <%= @soldado.patente %>
-</p>
+    <p>
+      <strong>Nome:</strong>
+      <%= @soldado.nome %>
+    </p>
 
-<%= link_to 'Edit', edit_soldado_path(@soldado) %> |
-<%= link_to 'Back', soldados_path %>
+    <p>
+      <strong>Patente:</strong>
+      <%= @soldado.patente %>
+    </p>
+
+  </div>
+  <div class="panel-footer">
+    <%= link_to 'Editar', edit_soldado_path(@soldado), :class => "btn btn-info"%>
+    <%= link_to 'Voltar', soldados_path, :class => "btn btn-default" %>
+  </div>
+</div>
