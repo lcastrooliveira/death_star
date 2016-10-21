@@ -24,7 +24,7 @@ class AeronavesController < ApplicationController
   # POST /aeronaves
   # POST /aeronaves.json
   def create
-    #@aeronave = Aeronave.new(aeronave_params)
+    @aeronave = Aeronave.new(aeronave_params)
 
     respond_to do |format|
       if @aeronave.save
